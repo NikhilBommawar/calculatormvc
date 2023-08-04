@@ -20,7 +20,7 @@ describe('DisplayComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('initial value should be zero',() =>{
+  it('initial value should be null',() =>{
     
     let input = fixture.debugElement.query(By.css("#display")).nativeElement;
     console.log(input)
