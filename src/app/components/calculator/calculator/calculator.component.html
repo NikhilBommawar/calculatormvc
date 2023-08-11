@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="container">
-        <app-display [value]='value' ></app-display>
+        <app-display [value]='value'></app-display>
     </div>
 
     <div class="container">
@@ -10,12 +10,14 @@
                 [id]="id" [id]="funId" (onClick)="functionBtnHandler($event)">
             </app-function-btn>
         </div>
+
         <div class="row">
             <div class="col numerics">
-                <app-numeric-btn  *ngFor="let numBtn of calculatorModel.numericButton; let i = index" [label]="numBtn"
+                <app-numeric-btn *ngFor="let numBtn of calculatorModel.numericButton; let i = index" [label]="numBtn"
                     [id]="numId" (onClick)="numBtnHandler($event)">
                 </app-numeric-btn>
             </div>
+
             <div class="col operators">
                 <app-operation-btn *ngFor="let opBtn of calculatorModel.operationButton; let i = index" [label]="opBtn"
                     [id]="id" [id]="opId" (onClick)="operationBtnHandler($event)">

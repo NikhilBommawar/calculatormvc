@@ -9,14 +9,11 @@ import { Observable, catchError, tap } from 'rxjs';
 })
 
 
-
 export class BackendService {
   
   constructor(private http : HttpClient) { }
 
-  
-
-  readonly httpOptions = {
+   readonly httpOptions = {
     headers: new HttpHeaders({ 
       'Access-Control-Allow-Origin':'*',
       'Authorization':'authkey',
@@ -27,13 +24,12 @@ export class BackendService {
 
   baseUrl : string = 'http://localhost:8080/SecurityDemo4/';
 
-  eval(stack : any) : any{
+ eval(stack : any) : any{
     
   let username='nikhil'
   let password='nikhil'
 
   const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password)});
-
     console.log("stack in backend eval", stack ) 
     console.log(JSON.stringify(stack))
     return  this.http.post(this.baseUrl + 'calc',JSON.stringify(stack) ,{headers});

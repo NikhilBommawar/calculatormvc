@@ -17,7 +17,7 @@ export class ButtonComponent  {
 
   onButtonClick(label:any) {
     console.log("in onButtonClick")
-    console.log(this.type1)
+    console.log("value =",label)
     this.onClick.emit(label);
   }
 }
