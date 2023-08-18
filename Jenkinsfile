@@ -21,7 +21,7 @@ pipeline {
          stage('Test') {
             steps {
                 echo "Test called"
-                bat 'ng test --include src\app\components\display\display\display.component.spec.ts'
+                bat 'ng test --include src/app/components/display/display/display.component.spec.ts'
                 
             }
         }
