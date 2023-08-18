@@ -25,6 +25,14 @@ pipeline {
                 
             }
         }
+
+      stage('Deploy') {
+            steps {
+                echo "Deploy called"
+                // Add deployment commands here
+                // For example: bat 'kubectl apply -f deployment.yaml'
+            }
+        }
         // Add other stages as needed
         
     }
