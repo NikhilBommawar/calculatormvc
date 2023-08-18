@@ -18,7 +18,13 @@ pipeline {
                 bat 'npm run build'
             }
         }
-        
+         stage('Test') {
+            steps {
+                echo "Test called"
+                bat 'ng test --include src\app\components\display\display\display.component.spec.ts'
+                
+            }
+        }
         // Add other stages as needed
         
     }
