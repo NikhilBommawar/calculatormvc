@@ -29,8 +29,11 @@ pipeline {
       stage('Deploy') {
             steps {
                 echo "Deploy called"
-                // Add deployment commands here
-                // For example: bat 'kubectl apply -f deployment.yaml'
+             // Install http-server globally if not already installed
+                 bat 'npm install -g http-server'
+
+            // Serve the built Angular app using http-server
+                bat 'http-server -p 4200 -c-1 dist/calculatormvc'
             }
         }
         // Add other stages as needed
