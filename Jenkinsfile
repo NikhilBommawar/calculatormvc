@@ -18,7 +18,22 @@ pipeline {
                 bat 'npm run build'
             }
         }
-        
+         stage('Test') {
+            steps {
+                echo "Test called"
+                bat 'ng test --include src/app/components/display/display/display.component.spec.ts --no-watch --no-progress'
+                
+            }
+        }
+
+      stage('Deploy') {
+            steps {
+                echo "Deploy called"
+           
+             //    bat 'npm install -g http-server'
+             //   bat 'http-server -p 4200 -c-1 dist/calculatormvc'
+            }
+        }
         // Add other stages as needed
         
     }
