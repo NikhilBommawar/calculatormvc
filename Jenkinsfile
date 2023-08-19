@@ -29,11 +29,9 @@ pipeline {
       stage('Deploy') {
             steps {
                 echo "Deploy called"
-             // Install http-server globally if not already installed
-                 bat 'npm install -g http-server'
-
-            // Serve the built Angular app using http-server
-                bat 'http-server -p 4200 -c-1 dist/calculatormvc'
+           
+             //    bat 'npm install -g http-server'
+             //   bat 'http-server -p 4200 -c-1 dist/calculatormvc'
             }
         }
         // Add other stages as needed
