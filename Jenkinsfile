@@ -30,8 +30,8 @@ pipeline {
             steps {
                 echo "Deploy called"
            
-             //    bat 'npm install -g http-server'
-             //   bat 'http-server -p 4200 -c-1 dist/calculatormvc'
+                 bat 'npm install -g http-server'
+               bat 'http-server -p 4200 -c-1 dist/calculatormvc'
             }
         }
         // Add other stages as needed
